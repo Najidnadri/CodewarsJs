@@ -89,9 +89,35 @@ function encode(str,  n)
 }
 
 
+//question link: https://www.codewars.com/kata/55f8a9c06c018a0d6e000132/javascript
+function validatePIN (pin) {
+    //return true or false
+    if (pin.length == 4 || pin.length == 6) {
+      if (/^\d+$/.test(pin)) {
+        return true
+      }
+    }
+    return false
+}
+
+
 //--------------------------------
 //-------------KYU 6--------------
 //--------------------------------
+
+//question link: https://www.codewars.com/kata/545cedaa9943f7fe7b000048/javascript
+function isPangram(string){
+  let alphabets = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+  string = string.toLowerCase();
+  for (let i = 0; i < string.length; i++) {
+    alphabets = alphabets.filter(e => e !== string[i]);
+  }
+  if (alphabets.length !== 0) {
+    return false
+  } else {
+    return true
+  }
+}
 
 
 //--------------------------------
