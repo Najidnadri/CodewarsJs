@@ -100,6 +100,17 @@ function validatePIN (pin) {
     return false
 }
 
+//question link: https://www.codewars.com/kata/57cebe1dc6fdc20c57000ac9/javascript
+function findShort(s){
+  let allString = s.split(' ');
+  let shortest = allString[0].length;
+  for (let i = 0; i < allString.length; i++) {
+      if (allString[i].length < shortest) {
+        shortest = allString[i].length;
+      }
+  }
+  return shortest
+}
 
 //--------------------------------
 //-------------KYU 6--------------
